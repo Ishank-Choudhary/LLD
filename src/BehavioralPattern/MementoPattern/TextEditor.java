@@ -2,6 +2,7 @@ package BehavioralPattern.MementoPattern;
 
 public class TextEditor {
 
+    // current state
     private String content = "";
 
     public TextEditor(String content) {
@@ -11,19 +12,22 @@ public class TextEditor {
     public TextEditor() {
     }
 
+    // creates a snapshot of the current state
     public EditorMemento save(){
-        return  new EditorMemento(content);
+        return new EditorMemento(content);
     }
 
-    // Restore the previous state
+    // restores the editor state from a snapshot (memento)
     public void restore(EditorMemento editorMemento){
         content = editorMemento.getContent();
     }
 
+    // returns the current state
     public String getContent() {
         return content;
     }
 
+    // modifies the current state by appending text
     public void write(String newText){
         this.content += newText;
     }

@@ -14,9 +14,13 @@ public class Main {
         textEditor.write("\nIshank is a java developer");
         textHistory.saveState(textEditor);
 
-        //textHistory.undo(textEditor);
+        textEditor.write("\nIshank is a python developer");
+        textHistory.saveState(textEditor);
 
-        System.out.println("DEBUG: " + textEditor.getContent());
+       textHistory.undo(textEditor);
+       textHistory.redo(textEditor);
+
+        System.out.println(textEditor.getContent());
 
     }
 }
