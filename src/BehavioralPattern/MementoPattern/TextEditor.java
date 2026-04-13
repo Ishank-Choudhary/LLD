@@ -19,7 +19,7 @@ public class TextEditor {
 
     // restores the editor state from a snapshot (memento)
     public void restore(EditorMemento editorMemento){
-        content = editorMemento.getContent();
+        content = editorMemento.getContent(); // content is the single string that is sumup of all the strings we passed in the write method.
     }
 
     // returns the current state
