@@ -9,6 +9,8 @@ class PaymentService{
             System.out.println("We are paying using Debit card");
         } else if (paymentMethod.equals("UPI")) {
             System.out.println("We are paying using UPI");
+        }else {
+            System.out.println("Unsupported payment method");
         }
     }
 }
