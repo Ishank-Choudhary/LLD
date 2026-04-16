@@ -6,7 +6,7 @@ import java.util.List;
 public class WeatherStation implements Subject {
 
     private float temp;
-    private List<Observer> observerList = new ArrayList<>();
+    private List<Observer> observerList = new ArrayList<>(); // internally it stores [ DisplayDevice object, DisplayDevice object ]
 
     public void setTemp(float temp) {
         this.temp = temp;
