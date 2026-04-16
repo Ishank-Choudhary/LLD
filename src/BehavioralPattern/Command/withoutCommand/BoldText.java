@@ -7,7 +7,7 @@ public class BoldText {
         this.textEditor=textEditor;
     }
 
-    public void BoldItalics(){
+    public void click(){
         textEditor.italicText();
     }
 }
