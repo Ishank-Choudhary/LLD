@@ -1,4 +1,4 @@
-package BehavioralPattern.StatePattern.withState;
+package BehavioralPattern.StatePattern.withoutState;
 
 enum TransportationMode{
     WALKING,CYCLING,CAR,TRAIN
