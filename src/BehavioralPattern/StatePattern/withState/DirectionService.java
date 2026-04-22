@@ -15,8 +15,4 @@ public class DirectionService {
     public int getEta(){
         return transportationMode.calculateETA();
     }
-
-    public String getDirection(){
-        return transportationMode.getDirection();
-    }
 }
