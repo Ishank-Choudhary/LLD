@@ -6,9 +6,9 @@ class WindowsScrollbar{
     }
 }
 
-class WindowsClick{
+class MacOsScrollBar{
     public void render(){
-        System.out.println("Rendering windows click");
+        System.out.println("Rendering macos scroll bar");
     }
 }
 
@@ -18,7 +18,8 @@ public class Main {
         WindowsScrollbar ws = new WindowsScrollbar();
         ws.render();
 
-        WindowsClick wc = new WindowsClick();
-        wc.render();
+       MacOsScrollBar ms = new MacOsScrollBar();
+       ms.render();
+
     }
 }
