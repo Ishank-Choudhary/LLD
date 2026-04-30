@@ -1,39 +1,28 @@
 package CreationalPattern.PrototypePattern.withoutPrototype;
 
-public class GameCharacter implements Cloneable{
+public class GameCharacter {
     String type;
     int health;
     String weapon;
 
     public GameCharacter(String type) {
         this.type = type;
-        loadHeavyData(); // expensive (only once)
+        loadHeavyData();
     }
 
-    private void loadHeavyData() {
-        System.out.println("Loading character data from DB for " + type);
-        try {
-            Thread.sleep(2000); // simulate delay
-        } catch (InterruptedException e) {
+    public void loadHeavyData(){
+        System.out.println("Loading character data from DB for "+type);
+        try{
+            Thread.sleep(2000);
+        }catch (InterruptedException e){
             e.printStackTrace();
         }
     }
 
-    public void setWeapon(String weapon) {
-        this.weapon = weapon;
+    public void setWeapon(String weapon){
+        this.weapon=weapon;
     }
-
-    public void show() {
-        System.out.println(type + " with weapon " + weapon);
-    }
-
-    //prototype method
-    @Override
-    public GameCharacter clone(){
-        try{
-            return (GameCharacter) super.clone();
-        }catch (CloneNotSupportedException e){
-            throw new RuntimeException(e);
-        }
+    public void show(){
+        System.out.println(type+" with weapon "+weapon);
     }
 }

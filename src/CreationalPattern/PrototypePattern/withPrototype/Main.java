@@ -2,16 +2,14 @@ package CreationalPattern.PrototypePattern.withPrototype;
 
 public class Main {
     public static void main(String[] args) {
-        GameCharacter g1 = new GameCharacter("warrior");
-        g1.setWeapon("sword");
-        g1.show();
+        GameCharacter original = new GameCharacter("warrior");
 
-        GameCharacter g2 = new GameCharacter("warrior");
-        g2.setWeapon("Axe");
-        g2.show();
+        GameCharacter c1 = original.clone();
+        c1.setWeapon("sword");
+        c1.show();
 
-//     problem->
-//        Same base object (Warrior)
-//👉      But heavy loading happens AGAIN and AGAIN
+        GameCharacter c2 = original.clone();
+        c2.setWeapon("Gun");
+        c2.show();
     }
 }
